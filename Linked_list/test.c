@@ -2,7 +2,7 @@
 
 int main() {
 	testCreate();
-	testAddBranch();
+	testInsert();
 	return 0;
 }
 
@@ -18,24 +18,23 @@ void testCreate() {
 	printf("Tests Passed\n\n");
 }
 
-void testAddBranch() {
+void testInsert() {
 	TNODE *testNode = create();
 	testNode->value = 5;
-	testNode->numberOfNodes = 1;
 
-	printf("Test addBranch\n");
+	printf("Test insert\n");
 
 	printf("Test 1\n");
-	assert(addBranch(testNode,10)->value == 10);
-	assert(testNode->leftBranch->value == 10);
+	assert(insert(testNode,10)->value == 10);
 
 	printf("Test 2\n");
-	assert(addBranch(testNode,15)->value == 15);
-	assert(testNode->rightBranch->value == 15);
+	assert(insert(testNode,15)->value == 15);
 
 	printf("Test 3\n");
-	assert(addBranch(testNode,20)-> value == 20);
-	assert(testNode->leftBranch->leftBranch->value == 20);
+	assert(insert(testNode,20)-> value == 20);
+
+	printf("Test 4\n");
+	assert(insert(testNode,20)->value == 20);
 
 	printf("Tests Passed\n\n");
 }

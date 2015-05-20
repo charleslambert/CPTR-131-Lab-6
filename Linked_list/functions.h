@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 #define EMPTY NULL
 
 typedef struct treeNode {
 	int value;
-	int numberOfNodes;
-	struct treeNode *rightBranch;
-	struct treeNode *leftBranch;
+	struct treeNode *rightChild;
+	struct treeNode *leftChild;
 }TNODE;
 
 TNODE *create();
-TNODE *addBranch(TNODE *node, int value);
+TNODE *insert(TNODE *node, int value);

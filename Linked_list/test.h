@@ -4,4 +4,4 @@
 #include <math.h>
 
 void testCreate();
-void testAddBranch();
+void testInsert();
