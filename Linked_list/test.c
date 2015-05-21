@@ -6,6 +6,7 @@ int main() {
 	testPreorder();
 	testInorder();
 	testPostorder();
+	testDelete();
 	return 0;
 }
 
@@ -63,4 +64,19 @@ void testInorder() {
 void testPostorder() {
 //I dont know a proper way to incorperate 
 //a test for this function
+}
+
+void testDelete() {
+	TNODE *testNode = create();
+	testNode->value = 5;
+	insert(testNode,10);
+	insert(testNode,15);
+	insert(testNode,20);
+
+	printf("Test delete\n");
+
+	printf("Test 1\n");
+	delete(testNode);
+	assert(testNode->leftChild == NULL);
+	assert(testNode->rightChild == NULL);
 }

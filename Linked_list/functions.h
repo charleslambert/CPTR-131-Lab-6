@@ -12,3 +12,4 @@ TNODE *insert(TNODE *node, int value);
 void preOrder(TNODE *node);
 void inOrder(TNODE *node);
 void postOrder(TNODE *node);
+int delete(TNODE *node);

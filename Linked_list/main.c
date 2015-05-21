@@ -3,8 +3,12 @@
 int main() {
 	int input = 1;
 	TNODE *root = NULL;
+
+
 	while(input >= 0) {
 
+		//Ask for input if it the first input create tree with 
+		//that input else insert value into tree.
 		printf("What number would you like to input: ");
 		if (root == NULL){
 			scanf("%d", &input);
@@ -16,6 +20,7 @@ int main() {
 			insert(root, input);
 		}
 
+		//Print the tree in pre, in, and post order.
 		printf("\n");
 		preOrder(root);
 		printf("\n");
@@ -24,8 +29,13 @@ int main() {
 		postOrder(root);
 		printf("\n");
 	}
-	printf("Thank you\n"); 
-	
-	
+
+	//Free the root.
+	delete(root);
+	free(root);
+
+	printf("Thank you, Have a great day.\n"); 
+
+
 	return 0;
 }
