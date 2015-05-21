@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define EMPTY NULL
-
 typedef struct treeNode {
 	int value;
 	struct treeNode *rightChild;
@@ -11,4 +9,6 @@ typedef struct treeNode {
 
 TNODE *create();
 TNODE *insert(TNODE *node, int value);
-void preorder(TNODE *node);
+void preOrder(TNODE *node);
+void inOrder(TNODE *node);
+void postOrder(TNODE *node);

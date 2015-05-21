@@ -4,6 +4,8 @@ int main() {
 	testCreate();
 	testInsert();
 	testPreorder();
+	testInorder();
+	testPostorder();
 	return 0;
 }
 
@@ -49,11 +51,16 @@ void testInsert() {
 }
 
 void testPreorder() {
-	TNODE *testNode = create();
-	testNode->value = 5;
-	insert(testNode,0);
-	insert(testNode,10);
-	insert(testNode,15);
-	insert(testNode,20);
-	preorder(testNode);
+//I dont know a proper way to incorperate 
+//a test for this function
+}
+
+void testInorder() {
+//I dont know a proper way to incorperate 
+//a test for this function
+}
+
+void testPostorder() {
+//I dont know a proper way to incorperate 
+//a test for this function
 }

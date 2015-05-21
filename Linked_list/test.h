@@ -6,3 +6,5 @@
 void testCreate();
 void testInsert();
 void testPreorder();
+void testInorder();
+void testPostorder();
