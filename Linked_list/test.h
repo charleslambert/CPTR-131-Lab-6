@@ -5,3 +5,4 @@
 
 void testCreate();
 void testInsert();
+void testPreorder();

@@ -5,7 +5,7 @@ TNODE *create() {
 }
 
 TNODE *insert(TNODE *node, int value) {
-	if (node == EMPTY) {
+	if (node == NULL) {
 		node = create();
 		node->value = value;
 		return node;
@@ -15,11 +15,21 @@ TNODE *insert(TNODE *node, int value) {
 			printf("This value already exists.\n We will ignore this value.\n");
 			return node;
 		}
-		if(node->value < value) {
-			insert(node->rightChild, value);
+		else if (value > node->value) {
+			node->rightChild = insert(node->rightChild, value);
 		}
-		else {
-			insert(node->leftChild, value);
-		}		
+		else if (value < node->value){
+			node->leftChild = insert(node->leftChild, value);
+		}
+		return node;
 	}
+}
+
+void preorder(TNODE *node) {
+	if (node == NULL) {
+		return;
+	}
+	printf("%d\n", node->value);
+	preorder(node->leftChild);
+	preorder(node->rightChild);
 }

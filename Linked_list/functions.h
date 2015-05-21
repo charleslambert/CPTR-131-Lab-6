@@ -11,3 +11,4 @@ typedef struct treeNode {
 
 TNODE *create();
 TNODE *insert(TNODE *node, int value);
+void preorder(TNODE *node);
