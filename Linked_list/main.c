@@ -9,7 +9,7 @@ int main() {
 
 		//Ask for input if it the first input create tree with 
 		//that input else insert value into tree.
-		printf("What number would you like to input: ");
+		printf("\nWhat number would you like to input: ");
 		if (root == NULL){
 			scanf("%d", &input);
 			root = create();
@@ -20,19 +20,20 @@ int main() {
 			insert(root, input);
 		}
 
+		if (input >= 0) { 
 		//Print the tree in pre, in, and post order.
-		printf("\n");
+		printf("Preorder\n");
 		preOrder(root);
-		printf("\n");
+		printf("\nInorder\n");
 		inOrder(root);
-		printf("\n");
+		printf("\nPostorder\n");
 		postOrder(root);
 		printf("\n");
+		}
 	}
 
 	//Free the root.
 	delete(root);
-	free(root);
 
 	printf("Thank you, Have a great day.\n"); 
 
